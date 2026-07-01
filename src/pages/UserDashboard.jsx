@@ -190,7 +190,7 @@ function UserDashboard() {
                   user?.avatar
                     ? user.avatar.startsWith("http")
                       ? user.avatar
-                      : `http://localhost:8085${user.avatar}`
+                      : `http://${import.meta.env.VITE_API_HOST}${user.avatar}`
                     : `https://ui-avatars.com/api/?name=${user?.username}`
                 }
                 alt=""
@@ -451,7 +451,7 @@ function UserDashboard() {
                       src={
                         item.product?.imageUrl?.startsWith("http")
                           ? item.product.imageUrl
-                          : `http://localhost:8085${item.product?.imageUrl}`
+                          : `http://${import.meta.env.VITE_API_HOST}${item.product?.imageUrl}`
                       }
                       alt={item.product?.name}
                       className="w-20 h-20 object-cover rounded-xl border"

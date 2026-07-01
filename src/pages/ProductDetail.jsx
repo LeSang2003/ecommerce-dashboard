@@ -149,7 +149,7 @@ function ProductDetail() {
       setMainImage(
         res.data.imageUrl?.startsWith("http")
           ? res.data.imageUrl
-          : `http://localhost:8085${res.data.imageUrl}`,
+          : `http://${import.meta.env.VITE_API_HOST}${res.data.imageUrl}`,
       );
     } catch (err) {
       console.log(err);
@@ -503,7 +503,7 @@ function ProductDetail() {
 
     const url = img.imageUrl?.startsWith("http")
       ? img.imageUrl
-      : `http://localhost:8085${img.imageUrl}`;
+      : `http://${import.meta.env.VITE_API_HOST}${img.imageUrl}`;
 
     setMainImage(url);
   }, [showGallery, currentImageIndex, allImages]);
@@ -533,7 +533,7 @@ function ProductDetail() {
               {allImages.map((img, index) => {
                 const imageSrc = img.imageUrl?.startsWith("http")
                   ? img.imageUrl
-                  : `http://localhost:8085${img.imageUrl}`;
+                  : `http://${import.meta.env.VITE_API_HOST}${img.imageUrl}`;
 
                 return (
                   <button
@@ -569,7 +569,7 @@ function ProductDetail() {
                 const index = allImages.findIndex((img) => {
                   const url = img.imageUrl?.startsWith("http")
                     ? img.imageUrl
-                    : `http://localhost:8085${img.imageUrl}`;
+                    : `http://${import.meta.env.VITE_API_HOST}${img.imageUrl}`;
                   return url === mainImage;
                 });
 
@@ -866,7 +866,7 @@ function ProductDetail() {
                   src={
                     reviewImage.startsWith("http")
                       ? reviewImage
-                      : `http://localhost:8085${reviewImage}`
+                      : `http://${import.meta.env.VITE_API_HOST}${reviewImage}`
                   }
                   alt=""
                   className="
@@ -987,7 +987,7 @@ function ProductDetail() {
                             r.avatar
                               ? r.avatar.startsWith("http")
                                 ? r.avatar
-                                : `http://localhost:8085${r.avatar}`
+                                : `http://${import.meta.env.VITE_API_HOST}${r.avatar}`
                               : `https://ui-avatars.com/api/?name=${r.username}`
                           }
                           alt={r.username}
@@ -1087,7 +1087,7 @@ function ProductDetail() {
                             src={
                               editImage.startsWith("http")
                                 ? editImage
-                                : `http://localhost:8085${editImage}`
+                                : `http://${import.meta.env.VITE_API_HOST}${editImage}`
                             }
                             alt=""
                             className="
@@ -1146,7 +1146,7 @@ function ProductDetail() {
                             src={
                               r.imageUrl.startsWith("http")
                                 ? r.imageUrl
-                                : `http://localhost:8085${r.imageUrl}`
+                                : `http://${import.meta.env.VITE_API_HOST}${r.imageUrl}`
                             }
                             alt="Review"
                             className="
@@ -1235,7 +1235,7 @@ function ProductDetail() {
             src={
               allImages[currentImageIndex].imageUrl.startsWith("http")
                 ? allImages[currentImageIndex].imageUrl
-                : `http://localhost:8085${allImages[currentImageIndex].imageUrl}`
+                : `http://${import.meta.env.VITE_API_HOST}${allImages[currentImageIndex].imageUrl}`
             }
             className="
         max-h-[90vh]

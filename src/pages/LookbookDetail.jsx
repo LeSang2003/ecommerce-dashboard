@@ -57,7 +57,7 @@ function LookbookDetail() {
               }
             >
               <img
-                src={`http://localhost:8085${image.imageUrl}`}
+                src={`http://${import.meta.env.VITE_API_HOST}${image.imageUrl}`}
                 alt=""
                 className="
                   w-full

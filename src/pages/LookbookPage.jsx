@@ -27,7 +27,9 @@ function LookbookPage() {
   const getImageUrl = (url) => {
     if (!url) return "/placeholder.jpg";
 
-    return url.startsWith("http") ? url : `http://localhost:8085${url}`;
+    return url.startsWith("http")
+      ? url
+      : `http://${import.meta.env.VITE_API_HOST}${url}`;
   };
 
   if (loading) {

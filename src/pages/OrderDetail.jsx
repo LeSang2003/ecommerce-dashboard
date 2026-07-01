@@ -231,7 +231,7 @@ function OrderDetail() {
                             item.imageUrl
                               ? item.imageUrl.startsWith("http")
                                 ? item.imageUrl
-                                : `http://localhost:8085/${item.imageUrl.replace(
+                                : `http://${import.meta.env.VITE_API_HOST}/${item.imageUrl.replace(
                                     /^\/+/,
                                     "",
                                   )}`

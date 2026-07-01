@@ -33,7 +33,9 @@ function CollectionPage() {
       return "https://via.placeholder.com/600x800?text=No+Image";
     }
 
-    return image.startsWith("http") ? image : `http://localhost:8085${image}`;
+    return image.startsWith("http")
+      ? image
+      : `http://${import.meta.env.VITE_API_HOST}${image}`;
   };
 
   if (!collection) {
@@ -51,7 +53,7 @@ function CollectionPage() {
         <img
           src={
             collection.bannerImage
-              ? `http://localhost:8085${collection.bannerImage}`
+              ? `http://${import.meta.env.VITE_API_HOST}${collection.bannerImage}`
               : "/placeholder.jpg"
           }
           alt={collection.name}

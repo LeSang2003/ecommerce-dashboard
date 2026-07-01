@@ -225,7 +225,7 @@ function AdminLookbookPage() {
                 src={
                   form.coverImage.startsWith("http")
                     ? form.coverImage
-                    : `http://localhost:8085${form.coverImage}`
+                    : `http://${import.meta.env.VITE_API_HOST}${form.coverImage}`
                 }
                 alt=""
                 className="w-40 rounded-lg border"
@@ -429,7 +429,7 @@ function AdminLookbookPage() {
                             img.imageUrl
                               ? img.imageUrl.startsWith("http")
                                 ? img.imageUrl
-                                : `http://localhost:8085${img.imageUrl}`
+                                : `http://${import.meta.env.VITE_API_HOST}${img.imageUrl}`
                               : "/placeholder.jpg"
                           }
                           alt=""

@@ -74,7 +74,7 @@ function CartPage() {
                     src={
                       item.imageUrl?.startsWith("http")
                         ? item.imageUrl
-                        : `http://localhost:8085${item.imageUrl}`
+                        : `http://${import.meta.env.VITE_API_HOST}${item.imageUrl}`
                     }
                     alt={item.name}
                     className="w-32 h-32 object-cover rounded-2xl"

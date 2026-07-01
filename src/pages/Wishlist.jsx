@@ -137,7 +137,7 @@ function Wishlist() {
                           ? product.images?.length > 0
                             ? product.images[0].imageUrl
                             : product.imageUrl
-                          : `http://localhost:8085${
+                          : `http://${import.meta.env.VITE_API_HOST}${
                               product.images?.length > 0
                                 ? product.images[0].imageUrl
                                 : product.imageUrl
