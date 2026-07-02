@@ -209,7 +209,7 @@ function UserOrders() {
                       src={
                         item.imageUrl?.startsWith("http")
                           ? item.imageUrl
-                          : `http://${import.meta.env.VITE_API_HOST}${item.imageUrl}`
+                          : `${import.meta.env.VITE_API_HOST}${item.imageUrl}`
                       }
                       alt={item.productName}
                       className="w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-xl border"

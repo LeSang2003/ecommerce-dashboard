@@ -173,7 +173,7 @@ function AdminCollections() {
                   <img
                     src={
                       c.bannerImage
-                        ? `http://${import.meta.env.VITE_API_HOST}${c.bannerImage}`
+                        ? `${import.meta.env.VITE_API_HOST}${c.bannerImage}`
                         : "/no-image.png"
                     }
                     alt=""
@@ -284,7 +284,7 @@ function AdminCollections() {
                   src={
                     form.bannerImage.startsWith("http")
                       ? form.bannerImage
-                      : `http://${import.meta.env.VITE_API_HOST}${form.bannerImage}`
+                      : `${import.meta.env.VITE_API_HOST}${form.bannerImage}`
                   }
                   alt=""
                   className="w-full h-52 object-cover rounded-lg"

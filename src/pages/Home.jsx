@@ -18,7 +18,7 @@ function Home() {
 
     return image.startsWith("http")
       ? image
-      : `http://${import.meta.env.VITE_API_HOST}${image}`;
+      : `${import.meta.env.VITE_API_HOST}${image}`;
   };
   useEffect(() => {
     loadProducts();
@@ -95,7 +95,7 @@ function Home() {
       {/* HERO */}
       <section className="relative h-screen -mt-[88px]">
         <img
-          src="http://${import.meta.env.VITE_API_HOST}/uploads/banner1.jpg"
+          src="${import.meta.env.VITE_API_HOST}/uploads/banner1.jpg"
           alt=""
           className="w-full h-full object-cover"
         />
@@ -141,7 +141,7 @@ function Home() {
           <div className="max-w-[1600px] mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <img
-                src={`http://${import.meta.env.VITE_API_HOST}${featuredLookbook.coverImage}`}
+                src={`${import.meta.env.VITE_API_HOST}${featuredLookbook.coverImage}`}
                 alt={featuredLookbook.title}
                 className="
             h-[900px]
@@ -214,7 +214,7 @@ function Home() {
                 src={
                   featuredCollection.bannerImage.startsWith("http")
                     ? featuredCollection.bannerImage
-                    : `http://${import.meta.env.VITE_API_HOST}${featuredCollection.bannerImage}`
+                    : `${import.meta.env.VITE_API_HOST}${featuredCollection.bannerImage}`
                 }
                 alt={featuredCollection.name}
                 className="

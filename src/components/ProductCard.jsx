@@ -8,7 +8,7 @@ function ProductCard({ product }) {
 
   const imageUrl = image?.startsWith("http")
     ? image
-    : `http://${import.meta.env.VITE_API_HOST}${image}`;
+    : `${import.meta.env.VITE_API_HOST}${image}`;
 
   return (
     <Link to={`/product/${product.id}`} className="group block">

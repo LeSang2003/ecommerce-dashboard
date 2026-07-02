@@ -129,7 +129,7 @@ function UserProfile() {
               user?.avatar
                 ? user.avatar.startsWith("http")
                   ? user.avatar
-                  : `http://${import.meta.env.VITE_API_HOST}${user.avatar}`
+                  : `${import.meta.env.VITE_API_HOST}${user.avatar}`
                 : `https://ui-avatars.com/api/?name=${user?.username}`
             }
             alt=""

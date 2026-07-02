@@ -18,7 +18,7 @@ function LookbookDetailPage() {
 
     return url.startsWith("http")
       ? url
-      : `http://${import.meta.env.VITE_API_HOST}${url}`;
+      : `${import.meta.env.VITE_API_HOST}${url}`;
   };
 
   useEffect(() => {

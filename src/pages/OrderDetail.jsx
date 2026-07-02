@@ -231,7 +231,7 @@ function OrderDetail() {
                             item.imageUrl
                               ? item.imageUrl.startsWith("http")
                                 ? item.imageUrl
-                                : `http://${import.meta.env.VITE_API_HOST}/${item.imageUrl.replace(
+                                : `${import.meta.env.VITE_API_HOST}/${item.imageUrl.replace(
                                     /^\/+/,
                                     "",
                                   )}`

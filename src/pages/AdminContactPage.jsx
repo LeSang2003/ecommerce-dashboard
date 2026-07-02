@@ -142,15 +142,11 @@ function AdminContactPage() {
   };
 
   const exportExcel = () => {
-    window.open(
-      "http://${import.meta.env.VITE_API_HOST}/api/contact/export/excel",
-    );
+    window.open("${import.meta.env.VITE_API_HOST}/api/contact/export/excel");
   };
 
   const exportPdf = () => {
-    window.open(
-      "http://${import.meta.env.VITE_API_HOST}/api/contact/export/pdf",
-    );
+    window.open("${import.meta.env.VITE_API_HOST}/api/contact/export/pdf");
   };
   return (
     <div className="p-6">

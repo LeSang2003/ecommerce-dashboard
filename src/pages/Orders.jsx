@@ -406,7 +406,7 @@ function Orders() {
                     src={
                       item.imageUrl?.startsWith("http")
                         ? item.imageUrl
-                        : `http://${import.meta.env.VITE_API_HOST}${item.imageUrl}`
+                        : `${import.meta.env.VITE_API_HOST}${item.imageUrl}`
                     }
                     alt=""
                     className="w-28 h-28 object-cover rounded-2xl border"

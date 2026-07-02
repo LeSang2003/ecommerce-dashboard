@@ -564,7 +564,7 @@ function Shop() {
                         ? p.images?.length > 0
                           ? p.images[0].imageUrl
                           : p.imageUrl
-                        : `http://${import.meta.env.VITE_API_HOST}${
+                        : `${import.meta.env.VITE_API_HOST}${
                             p.images?.length > 0
                               ? p.images[0].imageUrl
                               : p.imageUrl
@@ -595,7 +595,7 @@ function Shop() {
                         ? p.images?.length > 1
                           ? p.images[1].imageUrl
                           : p.imageUrl
-                        : `http://${import.meta.env.VITE_API_HOST}${
+                        : `${import.meta.env.VITE_API_HOST}${
                             p.images?.length > 1
                               ? p.images[1].imageUrl
                               : p.imageUrl

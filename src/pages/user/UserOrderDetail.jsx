@@ -82,7 +82,7 @@ function UserOrderDetail() {
               src={
                 item.imageUrl?.startsWith("http")
                   ? item.imageUrl
-                  : `http://${import.meta.env.VITE_API_HOST}${item.imageUrl}`
+                  : `${import.meta.env.VITE_API_HOST}${item.imageUrl}`
               }
               alt=""
               className="w-24 h-24 object-cover rounded-2xl border"

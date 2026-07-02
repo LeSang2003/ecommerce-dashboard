@@ -35,7 +35,7 @@ function CollectionPage() {
 
     return image.startsWith("http")
       ? image
-      : `http://${import.meta.env.VITE_API_HOST}${image}`;
+      : `${import.meta.env.VITE_API_HOST}${image}`;
   };
 
   if (!collection) {
@@ -53,7 +53,7 @@ function CollectionPage() {
         <img
           src={
             collection.bannerImage
-              ? `http://${import.meta.env.VITE_API_HOST}${collection.bannerImage}`
+              ? `${import.meta.env.VITE_API_HOST}${collection.bannerImage}`
               : "/placeholder.jpg"
           }
           alt={collection.name}
